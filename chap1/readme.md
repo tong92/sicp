@@ -42,3 +42,12 @@
 
 		(if (> x 0) x (- x))
 
+
+# applicative order evalutation
+
+	- 인자 값부터 계산
+	
+# normal order evaluation
+
+	- 식을 기본 연산까지 펼친 다음 계산
+	
