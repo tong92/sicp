@@ -10,3 +10,21 @@
 		(is (= (sqrt (+ (sqrt 2) (sqrt 3))) 1.7739279023207892))
 	)
 )
+
+(deftest fib-recur-test
+	(testing "fib-recur-simple-test"
+		(is (= (fib-recur 10) 55))
+	)
+)
+
+(deftest fib-iter-test
+	(testing "fib-iter-simple-test"
+		(is (= (fib-iter 10) 55))
+	)
+)
+
+(deftest count-change-test
+	(testing "count-change-simple-test"
+		(is (= (count-change 100) 292))
+	)
+)
