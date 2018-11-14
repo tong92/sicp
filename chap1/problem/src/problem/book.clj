@@ -93,3 +93,43 @@
 	[amount] 
 	(cc amount 5)
 )
+
+(defn expt-recur
+	[b n]
+	(if (= n 0)
+		1
+		(*' b (expt-recur b (- n 1)))
+	)
+)
+
+(defn expt-iter-inner
+	[b n result]
+	(if (= n 0)
+		result
+		(expt-iter-inner
+			b
+			(- n 1)
+			(*' result b)
+		)
+	)
+)
+
+(defn expt-iter
+	[b n]
+	(expt-iter-inner b n 1)
+)
+
+(defn square'
+	[n]
+	(*' n n)	
+)
+
+
+(defn expt-log
+	[b n]
+	(cond
+		(= n 0) 1
+		(even? n) (square' (expt-log b (/ n 2)))
+		:else (*' b (expt-log b (- n 1)))
+	)
+)
